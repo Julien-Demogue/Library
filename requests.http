@@ -1,0 +1,26 @@
+### CREATE A USER
+POST http://localhost:3000/auth/signup
+
+Content-Type: application/json
+{
+    "email": "email.signup@gmail.com",
+    "password" : "blablabla"
+}
+
+### SIGN IN
+GET http://localhost:3000/auth/signin
+
+Content-Type: application/json
+{
+    "email": "email.signup@gmail.com",
+    "password" : "blablabla"
+}
+
+### GET USER BY ID
+GET http://localhost:3000/auth/1
+
+
+### GET ALL USERS
+GET http://localhost:3000/auth/all
+
+
