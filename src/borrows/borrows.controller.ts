@@ -9,7 +9,7 @@ export class BorrowsController {
     ){}
 
     @Post('/create')
-    async createUser(@Body() body){
+    async createBorrow(@Body() body){
         return this.borrowsService.createBorrow(body.bookId, body.userId);
     }
 

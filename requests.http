@@ -1,7 +1,7 @@
 ### CREATE A USER
 POST http://localhost:3000/auth/signup
-
 Content-Type: application/json
+
 {
     "email": "email.signup@gmail.com",
     "password" : "blablabla"
@@ -9,8 +9,8 @@ Content-Type: application/json
 
 ### SIGN IN
 GET http://localhost:3000/auth/signin
-
 Content-Type: application/json
+
 {
     "email": "email.signup@gmail.com",
     "password" : "blablabla"
@@ -22,5 +22,43 @@ GET http://localhost:3000/auth/1
 
 ### GET ALL USERS
 GET http://localhost:3000/auth/all
+
+
+### CREATE BOOK
+POST http://localhost:3000/book/create
+Content-Type: application/json
+
+{
+    "title": "Book Title",
+    "author": "Author Name",
+    "genre": "Genre"
+}
+
+
+### GET BOOK BY ID
+GET http://localhost:3000/book/1
+
+
+### GET ALL BOOKS
+GET http://localhost:3000/book/all
+
+
+### CREATE BORROW
+POST http://localhost:3000/borrow/create
+Content-Type: application/json
+
+{
+    "bookId": 1,
+    "userId": 1
+}
+
+
+### GET BORROW BY ID
+GET http://localhost:3000/borrow/1
+
+
+### GET ALL BORROWS
+GET http://localhost:3000/borrow/all
+
 
 

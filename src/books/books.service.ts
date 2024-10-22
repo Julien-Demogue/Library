@@ -7,11 +7,12 @@ import { Book } from './book.entity';
 export class BooksService {
     constructor(@InjectRepository(Book) private repo: Repository<Book>){}
 
-    async createBook(title:string, author:string){
+    async createBook(title:string, author:string, genre: string){
         const book = this.repo.create(
             {
                 title:title,
                 author: author,
+                genre: genre,
                 rating: 0
             }
         )

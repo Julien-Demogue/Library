@@ -9,8 +9,9 @@ export class BooksController {
     ){}
 
     @Post('/create')
-    async createUser(@Body() body){
-        return this.booksService.createBook(body.title, body.author);
+    async createBook(@Body() body){
+        console.log(body);
+        return this.booksService.createBook(body.title, body.author, body.genre);
     }
 
     @Get('/:id')

@@ -13,6 +13,9 @@ export class Book {
     author: string
 
     @Column()
+    genre: string
+
+    @Column()
     rating: number
 
     @AfterInsert()
