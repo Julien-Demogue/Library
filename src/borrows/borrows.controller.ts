@@ -16,13 +16,13 @@ export class BorrowsController {
     @Get('/:id')
     @UseInterceptors(SerializeInterceptor)
     findById(@Param('id') id: number) {
-        const user = this.borrowsService.findOne(id)
-        return user
+        const borrow = this.borrowsService.findOne(id)
+        return borrow
     }
 
     @Get('/all')
     findAll() {
-        const users = this.borrowsService.findAll()
-        return users
+        const borrows = this.borrowsService.findAll()
+        return borrows
     }
 }
